@@ -1,3 +1,20 @@
+# React Native Reanimated Build Error Reproducible
+
+When installing (`npm install`) and attempting to build this project for android (`npx expo run:android`) the below error occurs
+
+```
+> Task :react-native-reanimated:buildCMakeDebug[x86_64] FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':react-native-reanimated:buildCMakeDebug[x86_64]'.
+> Cannot access output property 'soFolder' of task ':react-native-reanimated:buildCMakeDebug[x86_64]'. Accessing unreadable inputs or outputs is not supported. Declare the task as untracked by using Task.doNotTrackState(). For more information, please refer to https://docs.gradle.org/8.10.2/userguide/incremental_build.html#sec:disable-state-tracking in the Gradle documentation.
+   > java.io.IOException: Cannot snapshot C:\react-reanimated-repro\node_modules\react-native-reanimated\android\build\intermediates\cxx\Debug\53y66x4e\obj\x86_64\libc++_shared.so: not a regular file
+```
+
+---- Below Has Been Left as Generated ----
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
